@@ -18,6 +18,7 @@ resource "aws_instance" "k8s_workstation_ec2" {
         Name = "k8s-workstation-ec2"
     }
 }
+
 resource "aws_route53_record" "k8s_workstation_r53" {
     zone_id = var.zone_id
     name    = "k8s.${var.domain_name}"
